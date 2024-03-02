@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txtn1" id="txtn1">
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="somar">
+    <output>Seu Resultado: 0</output>
+
+    <script>
+        var botao = document.querySelector("input[type = button]")
+        botao.addEventListener("click", Soma)
+
+        function Soma() {
+            var n1 = Number(document.getElementById("txtn1").value)
+            var n2 = Number(document.getElementById("txtn2").value)
+            var out = document.querySelector("output")
+
+            if (n1 && n2) {
+                out.innerText = "Seu Resultado: " + (n1 + n2)
+            }
+        }
+    </script>
+</body>
+</html>
